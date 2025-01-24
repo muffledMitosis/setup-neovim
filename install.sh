@@ -20,6 +20,7 @@ elif [ "$PLAT" = "Linux" ]; then
   HOME_DIR="/home"
 else
   echo "Platform $PLAT not yet supported"
+  exit 1
 fi
 
 CONF_REPO="https://github.com/muffledMitosis/nvim.git"
