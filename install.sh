@@ -12,9 +12,19 @@ echo "Setting up Neovim..."
 # TODO: Check for deps
 # TODO: Install deps
 
+PLAT=$(uname)
+
+if [ "$PLAT" = "Darwin" ]; then
+  HOME_DIR="/Users"
+elif [ "$PLAT" = "Linux" ]; then
+  HOME_DIR="/home"
+else
+  echo "Platform $PLAT not yet supported"
+fi
+
 CONF_REPO="https://github.com/muffledMitosis/nvim.git"
-BACKUP_DIR="/home/$USER/.config/nvim.back"
-CONF_DIR="/home/$USER/.config/nvim"
+BACKUP_DIR="$HOME_DIR/$USER/.config/nvim.back"
+CONF_DIR="$HOME_DIR/$USER/.config/nvim"
 
 if [ -d "$BACKUP_DIR" ]; then
   rm -rf "$BACKUP_DIR"
