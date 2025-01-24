@@ -20,9 +20,12 @@ if [ -d "$BACKUP_DIR" ]; then
   rm -rf "$BACKUP_DIR"
 fi
 
+if [ -d "$CONF_DIR" ]; then
+  echo "Creating new backup"
+  cp -r "$CONF_DIR" "$BACKUP_DIR"
+  rm -rf "$CONF_DIR"
+fi
+
 echo "Cloning config"
-rm -rf "$CONF_DIR"
 git clone "$CONF_REPO" "$CONF_DIR"
 
-echo "Creating new backup"
-cp -r "$CONF_DIR" "$BACKUP_DIR"
