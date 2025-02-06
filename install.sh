@@ -8,6 +8,10 @@ echo "Setting up Neovim..."
 # Python 3
 # pip
 # node >= 22lts
+# jq
+# imagemagick
+# latex compiler with latexmk
+# skim or equivilant pdf viewer
 
 # TODO: Check for deps
 # TODO: Install deps
