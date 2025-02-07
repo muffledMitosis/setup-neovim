@@ -12,6 +12,7 @@ echo "Setting up Neovim..."
 # imagemagick
 # latex compiler with latexmk
 # skim or equivilant pdf viewer
+# ripgrep for telescope
 
 # TODO: Check for deps
 # TODO: Install deps
